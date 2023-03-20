@@ -28,8 +28,8 @@ Observable.generate(
 
 Observable.generate(
   initialState: 10,
-  condition: { $0 <= 20 },
-  iterate: { $0 + 1 }
+  condition: { $0 >= 0 },
+  iterate: { $0 - 1 }
 )
 .subscribe { print($0) }
 .disposed(by: disposeBag)
